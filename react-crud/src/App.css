@@ -1,0 +1,29 @@
+.App {
+  text-align: center;
+  font-family: Arial, sans-serif;
+}
+
+form {
+  margin: 20px 0;
+}
+
+input {
+  padding: 5px;
+  margin: 5px;
+}
+
+button {
+  margin: 5px;
+  padding: 5px 10px;
+}
+
+table {
+  margin: 20px auto;
+  width: 70%;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  padding: 10px;
+}
