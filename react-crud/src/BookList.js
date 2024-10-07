@@ -10,7 +10,9 @@ const BookList = ({ books, onEdit, onDelete }) => {
             <th>ID</th>
             <th>Title</th>
             <th>Author</th>
+            <th>Description</th>
             <th>Actions</th>
+            
           </tr>
         </thead>
         <tbody>
@@ -18,6 +20,7 @@ const BookList = ({ books, onEdit, onDelete }) => {
             <tr key={book.id}>
               <td>{book.id}</td>
               <td>{book.title}</td>
+              <td>{book.discription}</td>
               <td>{book.author}</td>
               <td>
                 <button onClick={() => onEdit(book)}>Edit</button>

@@ -3,23 +3,26 @@ import React, { useState, useEffect } from "react";
 const BookForm = ({ bookToEdit, onSave }) => {
   const [id, setId] = useState("");
   const [title, setTitle] = useState("");
+  const [discription, setDiscription] = useState("");
   const [author, setAuthor] = useState("");
 
   useEffect(() => {
     if (bookToEdit) {
       setId(bookToEdit.id);
       setTitle(bookToEdit.title);
+      setDiscription(bookToEdit.discription);
       setAuthor(bookToEdit.author);
     } else {
       setId("");
       setTitle("");
+      setDiscription("");
       setAuthor("");
     }
   }, [bookToEdit]);
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    const book = { id: id || Date.now(), title, author };
+    const book = { id: id || Date.now(), title, discription, author };
     onSave(book);
   };
 
@@ -40,6 +43,13 @@ const BookForm = ({ bookToEdit, onSave }) => {
           type="text"
           value={title}
           onChange={(e) => setTitle(e.target.value)}
+        />
+      </div>
+      <div>
+        <label>discription</label>
+        <input type="text" 
+            value={discription} 
+            onChange={(e) => setDiscription(e.target.value)}
         />
       </div>
       <div>
